@@ -1,0 +1,7 @@
+SELECT max(Salary) AS SecondHighestSalary            # For alise. 
+FROM Employee                                        # Return tuple
+WHERE Salary < (SELECT max(Salary) FROM Employee);   # it will give the max salary. 
+
+
+Here, it will give tuple only when salary is lesser than max. so we want the maximum salary that is just smallest than max.
+
