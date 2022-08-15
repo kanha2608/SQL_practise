@@ -1,0 +1,14 @@
+
+# Write your MySQL query statement below
+
+select a.name as Employee 
+from Employee a
+where a.managerId is not Null and a.salary > (select salary from Employee where a.managerId = id);
+
+
+
+2. Use of cross join
+
+select E1.Name 
+from Employee as E1, Employee as E2 
+where E1.ManagerId = E2.Id and E1.Salary > E2.Salary
